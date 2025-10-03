@@ -51,11 +51,11 @@ export default function App() {
       case 'faq':
         return <FAQPage />;
       case 'contact':
-        return <ContactPage />;
+        return <HomePage />;
       case 'pricing':
         return <PricingPage />;
       case 'testimonials':
-        return <TestimonialsPage />;
+        return <HomePage />;
       default:
         return <HomePage />;
     }
