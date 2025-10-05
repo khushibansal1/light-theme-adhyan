@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adhyan Guidance - Unlock Your Full Potential</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="logo-section">
+                    <img src="https://via.placeholder.com/48x48/1a1a2e/f39c12?text=A" alt="Adhyan Guidance Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="brand-name">ADHYAN</span>
+                        <span class="brand-tagline">FUELING CURIOUS MINDS</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    
+                    <div class="dropdown">
+                        <button class="dropdown-btn" id="servicesBtn">
+                            Services
+                            <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6,9 12,15 18,9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu" id="servicesMenu">
+                            <a href="#mathematics" class="dropdown-item">
+                                <div class="dropdown-item-title">Mathematics</div>
+                                <div class="dropdown-item-desc">IB & Dutch curriculum</div>
+                            </a>
+                            <a href="#physics" class="dropdown-item">
+                                <div class="dropdown-item-title">Physics</div>
+                                <div class="dropdown-item-desc">VMBO, HAVO, VWO</div>
+                            </a>
+                            <a href="#chemistry" class="dropdown-item">
+                                <div class="dropdown-item-title">Chemistry</div>
+                                <div class="dropdown-item-desc">All levels</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="nav-cta">
+                    <button class="cta-btn">Book Free Session</button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="mobile-menu-btn">
+                    <button id="mobileMenuToggle" class="menu-toggle">
+                        <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                        <svg class="close-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="mobile-menu-content">
+                    <a href="#home" class="mobile-nav-link">Home</a>
+                    
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-title">Services</div>
+                        <div class="mobile-dropdown-content">
+                            <a href="#mathematics" class="mobile-dropdown-link">Mathematics</a>
+                            <a href="#physics" class="mobile-dropdown-link">Physics</a>
+                            <a href="#chemistry" class="mobile-dropdown-link">Chemistry</a>
+                        </div>
+                    </div>
+                    
+                    <a href="#about" class="mobile-nav-link">About</a>
+                    <a href="#contact" class="mobile-nav-link">Contact</a>
+                    
+                    <button class="mobile-cta-btn">Book Free Session</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-grid">
+                <!-- Left Content -->
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        🎓 Trusted by 500+ Students
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Unlock Your 
+                        <span class="hero-title-highlight">Full Potential</span> 
+                        with Adhyan Guidance
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Whether you're struggling with math formulas, prepping for final exams, or just need help staying on top of your homework — Adhyan is here to guide you.
+                    </p>
+                    
+                    <div class="hero-info-card">
+                        <p class="info-card-text">
+                            We specialize in tutoring for <span class="highlight">IB Diploma</span> and <span class="highlight">Dutch high school students</span> (VMBO, HAVO, VWO), offering personalized support in:
+                        </p>
+                        
+                        <div class="subjects-grid">
+                            <div class="subject-card subject-math">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                                <span>Mathematics</span>
+                            </div>
+                            <div class="subject-card subject-physics">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M12 1v6m0 6v6"></path>
+                                    <path d="m9 9 3 3 3-3"></path>
+                                </svg>
+                                <span>Physics</span>
+                            </div>
+                            <div class="subject-card subject-chemistry">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 12h20"></path>
+                                    <path d="M12 2v20"></path>
+                                    <path d="m19 9-7 7-7-7"></path>
+                                </svg>
+                                <span>Chemistry</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-tagline">
+                        <span>🎓</span>
+                        <span>Helping students succeed — from brugklas to final exams!</span>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="primary-btn">
+                            <span>Start Your Journey</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12,5 19,12 12,19"></polyline>
+                            </svg>
+                        </button>
+                        
+                        <button class="secondary-btn">View Success Stories</button>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Students Helped</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Visual Elements -->
+                <div class="hero-visual">
+                    <div class="visual-container">
+                        <!-- Floating Cards -->
+                        <div class="floating-card card-1">
+                            <div class="card-content">
+                                <div class="card-icon math-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-title">Math Score</div>
+                                    <div class="card-grade">A+</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-card card-2">
+                            <div class="card-content">
+                                <div class="card-icon physics-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M12 1v6m0 6v6"></path>
+                                        <path d="m9 9 3 3 3-3"></path>
+                                    </svg>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-title">Physics</div>
+                                    <div class="card-subtitle">Grade Improved!</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-card card-3">
+                            <div class="card-content">
+                                <div class="card-icon chemistry-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M2 12h20"></path>
+                                        <path d="M12 2v20"></path>
+                                        <path d="m19 9-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-title">Chemistry</div>
+                                    <div class="card-subtitle">Exam Ready!</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Main illustration area -->
+                        <div class="main-illustration">
+                            <div class="illustration-content">
+                                <div class="graduation-icon">🎓</div>
+                                <div class="illustration-title">Excellence</div>
+                                <div class="illustration-subtitle">in Education</div>
+                            </div>
+                            
+                            <!-- Mathematical symbols -->
+                            <div class="math-symbol symbol-1">∫</div>
+                            <div class="math-symbol symbol-2">π</div>
+                            <div class="math-symbol symbol-3">Σ</div>
+                            <div class="math-symbol symbol-4">∆</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Background decorative elements -->
+                    <div class="bg-decorations">
+                        <div class="decoration decoration-1"></div>
+                        <div class="decoration decoration-2"></div>
+                        <div class="decoration decoration-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
