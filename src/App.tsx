@@ -55,7 +55,7 @@ export default function App() {
       case 'pricing':
         return <PricingPage />;
       case 'testimonials':
-        return <HomePage />;
+        return <TestimonialsPage />;
       default:
         return <HomePage />;
     }
