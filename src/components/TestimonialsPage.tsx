@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 interface Testimonial {
   id: string;
   name: string;
-  role: 'student' | 'teacher';
+  role: 'student' | 'parent';
   rating: number;
   text: string;
   avatar: string;
@@ -39,34 +39,10 @@ export default function TestimonialsPage() {
     {
       id: "3",
       name: "Sophia Ahmed",
-      role: "student",
+      role: "parent",
       rating: 5,
-      text: "I was completely lost in organic chemistry. The tailored learning plan broke everything down into manageable steps. Now I'm considering chemistry in university!",
+      text: "My child was completely lost in organic chemistry. The tailored learning plan broke everything down into manageable steps. Now he is considering chemistry in university!",
       avatar: "S"
-    },
-    {
-      id: "4",
-      name: "Max Jansen",
-      role: "student",
-      rating: 5,
-      text: "Having support in multiple subjects was game-changing. The integrated approach helped me see connections between math and physics that I never noticed before.",
-      avatar: "M"
-    },
-    {
-      id: "5",
-      name: "Lisa Thompson",
-      role: "teacher",
-      rating: 4,
-      text: "Good tutoring experience. The sessions were helpful and I saw improvement in my understanding of the subjects. The structured approach really worked for me.",
-      avatar: "L"
-    },
-    {
-      id: "6",
-      name: "David Chen",
-      role: "student",
-      rating: 4,
-      text: "Very satisfied with the tutoring quality. The approach was systematic and helped me build confidence in tackling difficult problems.",
-      avatar: "D"
     }
   ];
 
@@ -114,7 +90,7 @@ export default function TestimonialsPage() {
     const newTestimonial: Testimonial = {
       id: Date.now().toString(),
       name: formData.name,
-      role: formData.role as 'student' | 'teacher',
+      role: formData.role as 'student' | 'parent',
       rating: formData.rating,
       text: formData.text,
       avatar: formData.name.charAt(0).toUpperCase(),
@@ -251,7 +227,7 @@ export default function TestimonialsPage() {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="student">Student</SelectItem>
-                        <SelectItem value="teacher">Teacher</SelectItem>
+                        <SelectItem value="parent">Parent</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
