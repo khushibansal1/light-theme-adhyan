@@ -55,45 +55,42 @@ export default function ContactPage({ selectedPlan }: ContactPageProps) {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    try {
-      // Simulate submission delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+  try {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbwCsDmHQraf3VMStJAnBIywuge-NhPFiyDEjK5klmZAoYNYJdMnmdnYnk6LGfcTMDiw/exec", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
-      const submission: ContactSubmission = {
-        id: Date.now().toString(),
-        ...formData,
-        timestamp: new Date().toISOString()
-      };
+    toast.success("Message sent successfully!", {
+      description: "Your response has been recorded. We'll get back to you soon!",
+    });
 
-      const updatedSubmissions = [...submissions, submission];
-      setSubmissions(updatedSubmissions);
-      localStorage.setItem('contact-submissions', JSON.stringify(updatedSubmissions));
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      planType: selectedPlan || "",
+      message: "",
+    });
 
-      // Reset form
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        planType: selectedPlan || '',
-        message: ''
-      });
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    toast.error("Failed to send message", {
+      description: "Please try again later.",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
-      toast.success('Message sent successfully!', {
-        description: 'We\'ll get back to you within 24 hours.'
-      });
-
-    } catch (error) {
-      toast.error('Failed to send message', {
-        description: 'Please try again or contact us directly.'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   const exportToExcel = () => {
     if (submissions.length === 0) return;
