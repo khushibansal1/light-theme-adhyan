@@ -308,21 +308,7 @@ export default function ContactPage({ selectedPlan }: ContactPageProps) {
                       ></textarea>
                     </div>
 
-                    {/* Data Storage Notice */}
-                    <div className="bg-yellow-500/20 border border-yellow-500/40 rounded-lg p-4">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <p className="text-yellow-800 text-sm">
-                            <strong>Submissions Stored:</strong> Your form data is securely stored locally and can be exported to Excel/CSV format. {submissions.length > 0 && `Currently ${submissions.length} submission${submissions.length === 1 ? '' : 's'} saved.`}
-                          </p>
-                          <p className="text-yellow-700 text-sm mt-2">
-                            For immediate assistance: <span className="font-medium text-yellow-900">info@adhyanxguidance.com</span> or <span className="font-medium text-yellow-900">+31 (0) 123 456 789</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
+                    
                     <div className="space-y-4">
                       <button 
                         type="submit"
